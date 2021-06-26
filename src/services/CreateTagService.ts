@@ -8,9 +8,8 @@ interface ITag {
 class CreateTagService {
 	async execute({name}: ITag)
 	{
-		console.log('sad')
 		const tagRepositories = getCustomRepository(TagRepositories);
-		console.log('sada')
+		
 		if(!name){
 			throw new Error("It's empty");
 		}

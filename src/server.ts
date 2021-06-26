@@ -14,8 +14,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 	if(err instanceof Error) {
 		return res.status(400).json(
 			{
-				error: err.message,
-				stack: err.stack
+				error: err.message
 			}
 		);
 	}
@@ -26,4 +25,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 	});
 });
 
-app.listen(3333, () => console.log('WREEEEEEEEEEEEE'));
+app.listen(3333, () => console.log('Server....'));
